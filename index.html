@@ -11,7 +11,7 @@
 
     <input type="text" id="kHw" class="form-control" placeholder="type here consumption of electricity">
 
-    <button class="btn btn-info mt-2" onclick="chcckConsumption()">Check</button>
+    <button class="btn btn-info mt-2" onclick="checkConsumption()">Check</button>
 
 
 
@@ -19,40 +19,36 @@
         function checkConsumption(){
             var consumption = document.getElementById("kWh").value;
 
-            if(isNaN(consiumption) || consumption< 0){
+            if(isNaN(consumption) || consumption < 0){
                 alert("Please put a valid number");
 
             }
       
       
       
-            else if (consumption < 101){
+            else if (consumption <=100){
             alert("Lifeline Consumer ; Discouted rates");
 
         }
         
-        else if (consumption < 201){
+        else if (consumption <= 201){
             alert("Low consumption; Normal residential rate");
         }
 
-        else if (consumption < 301){
+        else if (consumption <= 301){
             alert("Average consumption; Typical electricy rate");
         }
 
 
          
         
-        else if (consumption < 501){
+        else if (consumption <= 501){
             alert("High consumption; Higher electricy rate");
-        } 
-
-         else if (consumption > 500){
-            alert("Very High consumption; Heavy electricy rate");
         } 
 
 
         else{
-            alert("Please sate your given consumption.");
+             alert("Very High consumption; Heavy electricy rate");
         }
     }   
     </script>
