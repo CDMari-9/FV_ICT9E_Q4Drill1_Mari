@@ -27,17 +27,32 @@
       
       
             else if (consumption < 101){
-            alert("You are underage");
+            alert("Lifeline Consumer ; Discouted rates");
 
         }
         
-        else if (age > 18){
-            alert("You are of legal age.");
+        else if (consumption < 201){
+            alert("Low consumption; Normal residential rate");
+        }
+
+        else if (consumption < 301){
+            alert("Average consumption; Typical electricy rate");
         }
 
 
+         
+        
+        else if (consumption < 501){
+            alert("High consumption; Higher electricy rate");
+        } 
+
+         else if (consumption > 500){
+            alert("Very High consumption; Heavy electricy rate");
+        } 
+
+
         else{
-            alert("Please sate your given age.");
+            alert("Please sate your given consumption.");
         }
     }   
     </script>
